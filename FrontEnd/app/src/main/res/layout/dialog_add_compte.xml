@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F0E1">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Solde"
+        app:hintTextColor="@color/hint_text_color"
+    android:layout_marginBottom="16dp"
+    app:boxBackgroundColor="#FFF9F1"
+    app:boxStrokeColor="#D3BBA3"
+    app:boxStrokeWidth="2dp">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/soldeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textColor="#8B5E3C"
+        android:backgroundTint="#D3BBA3" />
+
+</com.google.android.material.textfield.TextInputLayout>
+
+<RadioGroup
+android:id="@+id/typeGroup"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginTop="16dp">
+
+<RadioButton
+    android:id="@+id/typeCourant"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:checked="true"
+    android:text="Courant"
+    android:textColor="#8B5E3C"
+    android:buttonTint="#A47551" />
+
+<RadioButton
+    android:id="@+id/typeEpargne"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Epargne"
+    android:textColor="#8B5E3C"
+    android:buttonTint="#A47551" />
+
+</RadioGroup>
+
+    </LinearLayout>

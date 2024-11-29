@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GraphQLTP" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">#F5EFE6</item>
+    </style>
+
+    <style name="Theme.GraphQLTP" parent="Base.Theme.GraphQLTP" />
+</resources>

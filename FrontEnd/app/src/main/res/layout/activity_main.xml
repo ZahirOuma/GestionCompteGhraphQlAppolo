@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0E1"
+    android:padding="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/statsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#FDF6E3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#D3BBA3"
+        app:strokeWidth="2dp">
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/formatCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#EDE4D9"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/statsCard">
+
+        <RadioGroup
+            android:id="@+id/typeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/epargneRadio"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="EPARGNE"
+                android:textColor="#8B5E3C"
+                app:buttonTint="#A47551" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/courantRadio"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="COURANT"
+                android:textColor="#8B5E3C"
+                app:buttonTint="#A47551" />
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/allRadio"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TOUS"
+                android:textColor="#8B5E3C"
+                app:buttonTint="#A47551" />
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comptesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:padding="4dp"
+        android:background="#FFF9F1"
+        app:layout_constraintBottom_toTopOf="@id/addCompteButton"
+        app:layout_constraintTop_toBottomOf="@+id/formatCard"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addCompteButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="Ajouter un compte"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textColor="#FFF9F1"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#8B5E3C"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

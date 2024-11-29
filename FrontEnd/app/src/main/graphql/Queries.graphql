@@ -1,0 +1,53 @@
+# Récupérer tous les comptes
+query GetAllComptes {
+    allComptes {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+# Récupérer un compte par ID
+query GetCompteById($id: ID!) {
+    compteById(id: $id) {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+# Récupérer les statistiques totales
+query GetTotalSolde {
+    totalSolde {
+        count
+        sum
+        average
+    }
+}
+
+# Nouvelle requête pour filtrer par type
+query GetComptesForType($type: TypeCompte!) {
+    findByType(type: $type) {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+# Sauvegarder un nouveau compte
+mutation SaveCompte($compte: CompteInput!) {
+    saveCompte(compte: $compte) {
+        id
+        solde
+        dateCreation
+        type
+    }
+}
+
+# Nouvelle mutation pour supprimer un compte
+mutation DeleteCompte($id: ID!) {
+    deleteCompte(id: $id)
+}
